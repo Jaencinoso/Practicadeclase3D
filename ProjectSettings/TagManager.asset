@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Suelo
   - Monedas
+  - Jugador
+  - Malo
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class moverCirculo : MonoBehaviour
 {
@@ -44,6 +45,11 @@ public class moverCirculo : MonoBehaviour
         if (collision.gameObject.tag == "Suelo")
         {
             estaSuelo |= true;
+        }
+
+        if (collision.gameObject.tag == "Malo")
+        {
+            Destroy(gameObject);
         }
     }
     private void OnTriggerEnter(Collider collision)
