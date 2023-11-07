@@ -21,7 +21,7 @@ public class controlarCamara : MonoBehaviour
             {
 
                 cambiarcamara=false;
-
+               
             }
             else
             {

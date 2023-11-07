@@ -8,6 +8,7 @@ TagManager:
   - Monedas
   - Jugador
   - Malo
+  - Particulas
   layers:
   - Default
   - TransparentFX

@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class moverCirculo : MonoBehaviour
 {
     public float movX, movZ;
+    public float cameraX, cameraY;
     public float speed;
     public bool quiereSaltar = false;
     public bool estaSuelo = false;
     Rigidbody fisicas;
+    ParticleSystem part;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +53,7 @@ public class moverCirculo : MonoBehaviour
         if (collision.gameObject.tag == "Malo")
         {
             Destroy(gameObject);
+            Time.timeScale = 0;
         }
     }
     private void OnTriggerEnter(Collider collision)
@@ -57,6 +61,12 @@ public class moverCirculo : MonoBehaviour
         if (collision.gameObject.tag == "Monedas")
         {
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Particulas")
+        {
+            var part = GetComponent<ParticleSystem>();
+            part.Play();
         }
     }
 }
